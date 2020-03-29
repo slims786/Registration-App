@@ -1,0 +1,30 @@
+#configure server port
+server:
+  port: 8081
+
+#datasource property
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: scott
+    password: tiger
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+ 
+#orm properties
+  jpa:
+    properties:
+      hibernate:
+       show_sql: true
+       format_sql: true
+       dialect: org.hibernate.dialect.OracleDialect
+    hibernate:
+      ddl-auto: update
+ #mvc properties
+  mvc:
+    view:
+      prefix: /view/
+      suffix: .jsp
+      
+#logging configuration
+#debug: true
+
